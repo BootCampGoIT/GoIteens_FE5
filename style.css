@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============== header ================= */
+
+.header {
+  height: 25px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  box-shadow: 0px 0px 29px 7px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  height: 20px;
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+.logoIcon {
+  position: absolute;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigationList {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 12px;
+}
+
+.navLink {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 6px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.activeNavLink {
+  background-color: cornflowerblue;
+  border-radius: 5px;
+}
+
+.navLink a {
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+}
+
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userName {
+  display: none;
+  color: white;
+  font-size: 14px;
+}
+
+.userProfile {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.activeProfile {
+  background-color: green;
+}
+
+.userIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 12px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 40px;
+  }
+
+  .logo {
+    height: 35px;
+    width: 100px;
+  }
+
+  .logoIcon {
+    height: 30px;
+  }
+
+  .navLink a {
+    margin: 15px;
+    font-size: 12px;
+    padding: 7px;
+  }
+  .auth {
+    width: 80px;
+  }
+
+  .userName {
+    display: block;
+  }
+
+  .userProfile {
+    width: 28px;
+    height: 28px;
+  }
+
+  .userIcon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+}
