@@ -59,10 +59,20 @@
   padding: 4px;
 }
 
+
+
 .auth {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.userCart {
+  height: 30px;
+}
+
+.modalText {
+  color: white;
 }
 
 .userName {
@@ -93,6 +103,86 @@
   width: 12px;
   cursor: pointer;
 }
+
+.listItems {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.listItem {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.listItemTitle {
+  font-size: 12px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.listItemImgContainer {
+  width: 100%;
+}
+
+.listItemImg {
+  width: 100%;
+}
+
+.listItemDescription {
+  font-size: 10px;
+  text-align: justify;
+  margin: 10px 0;
+}
+
+.listItemPrice {
+  font-size: 12px;
+}
+
+.order {
+  position: absolute;
+  height: 50px;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 5px;
+}
+
+.listItemCart {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.listItemCartIMG {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+ 
+}
+
+.cartWindow {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+}
+
+.rightMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 
 @media (min-width: 768px) {
   .header {
