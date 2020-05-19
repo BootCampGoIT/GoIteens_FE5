@@ -1,4 +1,4 @@
- const createItemMarkup = (item) => {
+const createItemMarkup = (item) => {
     return `
     <li class="listItem">
     <h2 class="listItemTitle">${item.title}</h2>
@@ -6,7 +6,7 @@
     <div class="listItemImgContainer">
         <img src=${item.url} alt=${item.title} class="listItemImg"/>
     </div>
-    <p class="listItemDescription"> <b>Description: </b>${item.description}</p>
+    <p class="listItemDescription"> <b>Description: </b>${(item.description.length > 180) ? (item.description.slice(0, 180) + ' ...') : item.description}</p>
     <div class="order">
         <p class="listItemPrice"><b>Price: </b>${item.price} UAH</p>
         <div class="listItemCart">

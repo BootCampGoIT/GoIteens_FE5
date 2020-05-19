@@ -31,6 +31,8 @@
   transform: translate(-50%, -50%);
 }
 
+/* =================== navigation ========================== */
+
 .navigationList {
   display: flex;
   justify-content: center;
@@ -41,7 +43,7 @@
 .navLink {
   text-transform: uppercase;
   text-align: center;
-  margin: 6px;
+  margin: 4px;
   font-size: 10px;
   cursor: pointer;
   font-weight: 600;
@@ -49,26 +51,38 @@
 
 .activeNavLink {
   background-color: cornflowerblue;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 .navLink a {
-  width: 100px;
+  width: 90px;
   text-decoration: none;
   color: white;
   padding: 4px;
 }
 
+/* ========================== cart ============================ */
 
+.headerCart {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.headerCartIMG {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+/* ========================= auth ========================== */
 
 .auth {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.userCart {
-  height: 30px;
 }
 
 .modalText {
@@ -104,25 +118,27 @@
   cursor: pointer;
 }
 
+/* ======================= ListItems ================================= */
 .listItems {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listItem {
-  width: 200px;
-  height: 300px;
+  width: 310px;
+  height: 310px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 5px;
+  margin: 5px 0;
   padding: 5px;
   border-radius: 4px;
 }
 .listItemTitle {
-  font-size: 12px;
-  margin: 10px 0;
+  font-size: 14px;
+  margin: 5px 0;
   text-align: center;
 }
 
@@ -135,13 +151,14 @@
 }
 
 .listItemDescription {
-  font-size: 10px;
+  font-size: 12px;
   text-align: justify;
   margin: 10px 0;
 }
 
 .listItemPrice {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 800;
 }
 
 .order {
@@ -154,22 +171,32 @@
   bottom: 5px;
 }
 
+/* ============ cart ================== */
+
+.borderLine {
+  width: 1px;
+  height: 15px;
+  background-color: white;
+  margin: 0 10px;
+  border-radius: 1px;
+}
+
 .listItemCart {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   position: relative;
 }
 
 .listItemCartIMG {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
- 
 }
+
+/* ================= */
 
 .cartWindow {
   width: 200px;
@@ -182,7 +209,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 
 @media (min-width: 768px) {
   .header {
@@ -200,15 +226,16 @@
 
   .navLink a {
     margin: 15px;
-    font-size: 12px;
+    font-size: 16px;
     padding: 7px;
   }
   .auth {
-    width: 80px;
+    width: 90px;
   }
 
   .userName {
     display: block;
+    font-size: 16px;
   }
 
   .userProfile {
@@ -220,7 +247,76 @@
     height: 20px;
     width: 20px;
   }
-}
 
-@media (min-width: 1024px) {
+  /* ========================== cart ============================ */
+
+  .headerCart {
+    width: 35px;
+    height: 35px;
+    position: relative;
+  }
+
+  .headerCartIMG {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  /* ============ cart ================== */
+
+  .borderLine {
+    width: 1px;
+    height: 24px;
+    background-color: white;
+    margin: 0 10px;
+    border-radius: 1px;
+  }
+
+  .listItemCart {
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
+
+  .listItemCartIMG {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  /* ================= */
+
+  .cartWindow {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  /* ======================= ListItems ================================= */
+  .listItem {
+    width: 245px;
+    height: 350px;
+    margin: 5px 5px;
+  }
+  .listItemTitle {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  .listItemDescription {
+    font-size: 14px;
+  }
+
+  .listItemPrice {
+    font-size: 16px;
+    font-weight: 800;
+  }
 }
