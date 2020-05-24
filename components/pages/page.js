@@ -1,6 +1,6 @@
 const createItemMarkup = (item) => {
     return `
-    <li class="listItem">
+    <li class="listItem" data-licategory=${item.category} data-liid=${item.id}>
     <h2 class="listItemTitle">${item.title}</h2>
 
     <div class="listItemImgContainer">
@@ -10,7 +10,7 @@ const createItemMarkup = (item) => {
     <div class="order">
         <p class="listItemPrice"><b>Price: </b>${item.price} UAH</p>
         <div class="listItemCart">
-            <img src="../../assets/cart.png" alt="cartImage" class="listItemCartIMG"/>
+            <img src="../../assets/cart.png" alt="cartImage" class="listItemCartIMG" data-category=${item.category} data-id=${item.id}>
         </div>
     </div>
     </li>
