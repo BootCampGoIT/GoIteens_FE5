@@ -3,12 +3,16 @@ import { games, programs, news } from '../../data.js';
 import { addToCart } from '../cart/cart.js';
 import { openOrder } from '../modal/cartModal.js';
 import { openItemModal } from '../modal/itemCart.js';
+import {cart} from '../cart/cart.js';
 
 const header = () => {
     const navigationList = document.querySelector('.navigationList'); //ul
     const userProfile = document.querySelector('.userProfile');//div
     const listItems = document.querySelector('.listItems'); //ul
     const cartForModal = document.querySelector('.cartForModal');
+
+    const productsInCart = document.querySelector('.productsInCart')
+
 
     const userName = document.querySelector('.userName'); //span
     listItems.innerHTML = createMarkup(games);
@@ -52,14 +56,16 @@ const header = () => {
             if (category === 'games') {
                 for (const item of games) {
                     if (item.id === id) {
-                        addToCart(item)
+                        addToCart(item);
+                        productsInCart.textContent = cart.totalQuantity;
                     }
                 }
             }
             if (category === 'programs') {
                 for (const item of programs) {
                     if (item.id === id) {
-                        addToCart(item)
+                        addToCart(item);
+                        productsInCart.textContent = cart.totalQuantity;
                     }
                 }
             }
